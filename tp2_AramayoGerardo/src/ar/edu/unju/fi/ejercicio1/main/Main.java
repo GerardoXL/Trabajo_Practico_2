@@ -40,8 +40,9 @@ public class Main {
 				
 				System.out.println("ingresar origen de fabricacion: 1. ARGENTINA, 2. CHINA, 3. BRASIL, 4. URUGUAY ");
 				int origen_fabricacion = entrada.nextInt();
-				
 				entrada.nextLine();
+				
+				
 				
 				System.out.println("ingresar categoria del producto: 1. TELEFONIA, 2. INFORMATICA, 3. ELECTRO HOGAR, 4. HERRAMIENTAS ");
 				int categoria = entrada.nextInt();
@@ -76,9 +77,10 @@ public class Main {
 				
 				
 				System.out.println("ingresar el codigo del producto a modificar: ");
-				entrada.nextLine();
+				
 				
 				String ModifiCodigo = entrada.nextLine();
+				entrada.nextLine();
 				
 				for(Producto producto : productos) {
 					
@@ -96,6 +98,8 @@ public class Main {
 					
 					entrada.nextLine();
 					
+					producto.setPrecio_unitario(NuevoPrecio);
+					
 					System.out.println("elegir el nuevo origen de fabricacion 1. ARGENTINA, 2. CHINA, 3. BRASIL, 4:URUGUAY: ");
 					
 					int OrigenNuevo = entrada.nextInt();
@@ -106,12 +110,15 @@ public class Main {
 					
 					producto.setOrigen_fabricacion(nuevoOrigen_Fabricacion);
 					
+					
 					System.out.println("elegir la nueva categoria del producto: 1. TELEFONIA, INFORMATICA, ELECTROHOGAR, HERRAMIENTAS: ");
 					
 					int CategoriaNueva = entrada.nextInt();
 					entrada.nextLine();
 					
 					Producto.Categoria nuevCategoria = Producto.Categoria.values()[CategoriaNueva -1];
+					
+					producto.setCategoria(nuevCategoria);
 					
 						
 					}
