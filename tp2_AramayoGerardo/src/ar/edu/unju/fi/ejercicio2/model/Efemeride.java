@@ -9,7 +9,11 @@ public class Efemeride {
 	private Mes mes;
 	
 	
-		
+    public Efemeride() {
+    	
+    	
+    	
+    }
 		
 	
 	
@@ -26,7 +30,29 @@ public class Efemeride {
 	}
 
 
-
+    public int ObtenerDiasDelMes() {
+    	
+    	if(mes == Mes.ENERO || mes == Mes.MARZO || mes ==  Mes.MAYO || mes == Mes.JULIO || mes == Mes.AGOSTO || mes == Mes.OCTUBRE || mes == Mes.DICIEMBRE) {
+    		
+           return 31;
+    		
+    	}else if(mes == Mes.ABRIL || mes == Mes.JUNIO || mes == Mes.SEPTIEMBRE || mes == Mes.NOVIEMBRE) {
+    		
+    		return 30;
+    		
+    	}else if (mes == Mes.FEBRERO) {
+    		
+    	   return 28;
+    	   
+    	}else {
+    		return 0;
+    		
+    	}
+    	
+    	
+    	
+    	
+    }
 
 
 
