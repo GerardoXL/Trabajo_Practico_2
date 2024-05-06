@@ -11,10 +11,10 @@ package ar.edu.unju.fi.ejercicio3.constantes;
 		
 	    
 	   private int cantidad_poblacion;
-	   private double superficie;
+	   private float superficie;
 		
 		
-		 Provincia(int cantidad_poblacion, double superficie) {
+		 Provincia(int cantidad_poblacion, float superficie) {
 			
 			this.cantidad_poblacion = cantidad_poblacion;
 			this.superficie = superficie;
@@ -37,16 +37,16 @@ package ar.edu.unju.fi.ejercicio3.constantes;
 		}
 
 
-		public void setSuperficie(double superficie) {
+		public void setSuperficie(float superficie) {
 			this.superficie = superficie;
 		}
 		 
 		 
 		//metodo para calcular densidad poblacional
 		
-		 public double CaluloDensidadPoblacion(){
+		 public float CaluloDensidadPoblacion(){
 			 
-			 double DensidadPoblacion = cantidad_poblacion / superficie;
+			 float DensidadPoblacion = cantidad_poblacion / superficie;
 			 
 			 return DensidadPoblacion;
 					 
