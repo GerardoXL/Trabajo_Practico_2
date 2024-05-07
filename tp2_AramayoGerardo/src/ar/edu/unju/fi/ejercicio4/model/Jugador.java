@@ -1,5 +1,7 @@
 package ar.edu.unju.fi.ejercicio4.model;
 import ar.edu.unju.fi.ejercicio4.constantes.Posicion;
+
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Jugador {
@@ -23,6 +25,16 @@ public class Jugador {
 		this.estatura = estatura;
 		this.peso = peso;
 		
+	}
+
+
+	public Posicion getPosicion() {
+		return posicion;
+	}
+
+
+	public void setPosicion(Posicion posicion) {
+		this.posicion = posicion;
 	}
 
 
@@ -105,7 +117,14 @@ public class Jugador {
 		return edad;
 	}
 	
-	
+	@Override
+	public String toString() {
+		
+          SimpleDateFormat fechaformato = new SimpleDateFormat("dd-MM-yyyy");
+          return 
+        		  fechaformato.format(fecha_de_nacimiento.getTime());
+		
+	}
 	
 	
 	
