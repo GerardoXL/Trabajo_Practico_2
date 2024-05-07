@@ -1,18 +1,19 @@
 package ar.edu.unju.fi.ejercicio4.model;
 import ar.edu.unju.fi.ejercicio4.constantes.Posicion;
+import java.util.Calendar;
 
 public class Jugador {
 	
 	private String nombre;
 	private String apellido;
-	private int fecha_de_nacimiento;
+	private Calendar fecha_de_nacimiento;
 	private String nacionalidad;
 	private double estatura;
 	private double peso;
 	private Posicion posicion;
 	
 	
-	public Jugador(String nombre, String apellido, int fecha_de_nacimiento,
+	public Jugador(String nombre, String apellido, Calendar fecha_de_nacimiento,
 			String nacionalidad, double estatura, double peso) {
 		
 		this.nombre = nombre;
@@ -45,12 +46,12 @@ public class Jugador {
 	}
 
 
-	public int getFecha_de_nacimiento() {
+	public Calendar getFecha_de_nacimiento() {
 		return fecha_de_nacimiento;
 	}
 
 
-	public void setFecha_de_nacimiento(int fecha_de_nacimiento) {
+	public void setFecha_de_nacimiento(Calendar fecha_de_nacimiento) {
 		this.fecha_de_nacimiento = fecha_de_nacimiento;
 	}
 
@@ -84,6 +85,25 @@ public class Jugador {
 		this.peso = peso;
 	}
 	
+	
+	//metodo para calcular la edad el jugador
+	
+	public int CalculoEdadJugador() {
+		
+		Calendar fechaActual = Calendar.getInstance();
+		
+		int edad = fechaActual.get(Calendar.YEAR) - fecha_de_nacimiento.get(Calendar.YEAR);
+		
+		if(fechaActual.get(Calendar.DAY_OF_MONTH) > fecha_de_nacimiento.get(Calendar.DAY_OF_MONTH)
+				|| fecha_de_nacimiento.get(Calendar.MONTH) == fechaActual.get(Calendar.MONTH)
+				&& fecha_de_nacimiento.get(Calendar.DATE) > fechaActual.get(Calendar.DATE)) {
+			
+			edad--;
+	
+		}
+		
+		return edad;
+	}
 	
 	
 	
