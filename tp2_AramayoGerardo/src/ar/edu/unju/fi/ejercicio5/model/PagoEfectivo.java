@@ -1,5 +1,7 @@
 package ar.edu.unju.fi.ejercicio5.model;
 import ar.edu.unju.fi.ejercicio5.interfaces.Pago;
+
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class PagoEfectivo implements Pago{
@@ -22,8 +24,10 @@ public class PagoEfectivo implements Pago{
 	public void imprimirRecibo() {
 		// TODO Auto-generated method stub
 		
+		DecimalFormat df = new DecimalFormat("#.00");
+		
 		System.out.println("Fecha de pago: " + fecha_de_pago );
-		System.out.println("Monto pagado: " + monto_pagado);
+		System.out.println("Monto pagado: " + df.format(monto_pagado));
 		
 		
 		
