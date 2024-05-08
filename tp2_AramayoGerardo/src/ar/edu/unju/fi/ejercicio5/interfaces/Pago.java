@@ -1,5 +1,10 @@
 package ar.edu.unju.fi.ejercicio5.interfaces;
 
-public class Pago {
+public interface Pago {
+	
+	void realizarPago(double monto);
+	void imprimirRecibo();
+	
+	
 
 }
